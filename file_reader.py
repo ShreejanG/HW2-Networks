@@ -34,7 +34,7 @@ class FileReader:
             if os.path.isdir(self.dir_path + filepath):
                 dirResposne = '<html><body><h1>'+ filepath +'</h1></body></html>'
                 headerContents += "Server sg3gj"
-                headerContents += "Content-length:", str(len(dirResposne.encode()))+"\r\n"
+                headerContents += "Content-length:" + str(len(dirResposne.encode()))+"\r\n"
             else:
                 headerContents += "Content-length:" + str(os.path.getsize(self.dir_path + filepath))+"\r\n" 
 
